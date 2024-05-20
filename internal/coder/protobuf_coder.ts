@@ -1,8 +1,8 @@
-import { getErrorMessage } from "../errors/get_error_message.js";
-import { CoderError } from "../errors/coder_error.js";
-import protobuf, { Root, Type } from "protobufjs";
-import { ICoder } from "../interfaces/coder.js";
 import { createRequire } from "module";
+import protobuf, { Root, Type } from "protobufjs";
+import { CoderError } from "../errors/coder_error.js";
+import { getErrorMessage } from "../errors/get_error_message.js";
+import { ICoder } from "../interfaces/coder.js";
 import { Logger } from "../logger/logger.js";
 const { load } = protobuf;
 
@@ -26,7 +26,7 @@ export class Coder implements ICoder {
         private fileName: string,
         private packageName: string,
         private messageType: string,
-        private fileDirectory: string = "@maticnetwork/chain-indexer-framework/schemas"
+        private fileDirectory: string = "@secured-finance/chain-indexer-framework/schemas"
     ) { }
 
     /**

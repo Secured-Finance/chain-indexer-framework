@@ -1,0 +1,26 @@
+package blockpackage;
+syntax = "proto3";
+
+import "transaction.proto";
+
+message FEVMTransaction {
+    required string hash = 1;
+    required uint64 nonce = 2;
+    string blockHash = 3;
+    uint64 blockNumber = 4;
+    uint64 transactionIndex = 5;
+    required string from = 6;
+    string to = 7;
+    required string value = 8;
+    string gasPrice = 9;
+    required uint64 gas = 10;
+    required string input = 11;
+    string maxFeePerGas = 12;
+    string maxPriorityFeePerGas = 13;
+    string chainId = 14;
+    string v = 15;
+    string r = 16;
+    string s = 17;
+    uint32 type = 18;
+    required TransactionReceipt receipt = 19;
+}

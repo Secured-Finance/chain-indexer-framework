@@ -1,5 +1,5 @@
 {
-  "name": "@maticnetwork/chain-indexer-framework",
+  "name": "@secured-finance/chain-indexer-framework",
   "version": "1.3.7",
   "description": "blockchain data indexer",
   "type": "module",
@@ -23,7 +23,7 @@
   "scripts": {
     "tests": "jest --coverage",
     "tests:integration": "echo 'Hello integration tests'",
-    "prepublish": "npm run build && npm run tests",
+    "prepublishOnly": "npm run build && npm run tests",
     "build": "tsc && tsc-alias && npm run copy-proto",
     "build:link": "npm run build && npm link",
     "copy-proto": "cp -R ./schemas/ ./dist/schemas",
@@ -33,16 +33,16 @@
   "author": "nitinmittal23",
   "license": "MIT",
   "files": [
-    "./dist/**"
+    "dist/**/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0xPolygon/chain-indexer-framework.git"
+    "url": "git+https://github.com/secured-finance/chain-indexer-framework.git"
   },
   "bugs": {
-    "url": "https://github.com/0xPolygon/chain-indexer-framework/issues"
+    "url": "https://github.com/secured-finance/chain-indexer-framework/issues"
   },
-  "homepage": "https://github.com/0xPolygon/chain-indexer-framework#readme",
+  "homepage": "https://github.com/secured-finance/chain-indexer-framework#readme",
   "dependencies": {
     "axios": "^1.3.6",
     "ethereum-bloom-filters": "^1.0.10",
